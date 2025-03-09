@@ -1,0 +1,94 @@
+---
+description: Apply when implementing new features or complex functionality that spans across components or services. Ideal for features requiring careful planning, multi-step execution, or integration of multiple system parts. This workflow focuses on thorough requirement analysis, documentation, step-by-step implementation, and verification to ensure robust, maintainable code.
+globs: 
+alwaysApply: false
+---
+## Structured Coding Workflow
+
+A workflow to focus on clear communication, thorough planning, and iterative development to transform AI tools into valuable development partners.
+
+### 1. Problem Definition & Requirement Analysis
+
+- **Start with Discussion, Not Code**
+    - Instruct Cursor **not** to generate code immediately
+    - Use AI to explore and refine feature requirements
+    - Document key constraints and acceptance criteria
+- **Detailed Feature Description**
+    - Provide as much contextual information as possible
+    - Reference relevant files, objects, and existing implementations
+    - Specify integration points and dependencies
+- **Clarification Process**
+    - Allow Cursor to ask follow-up questions
+    - Address ambiguities before proceeding to implementation
+    - Define clear boundaries for the scope
+
+### 2. Documentation & Planning
+
+- **Generate a Structured PRD (Product Requirements Document)**
+    - Use a standardized template for consistency
+    - Include acceptance criteria for each requirement
+    - Document technical constraints and dependencies
+- **Design Documentation**
+    - Break down implementation into clear, logical phases
+    - Define interfaces between components
+    - Create a shared understanding of architecture
+- **Comprehensive Context Provision**
+    - Import relevant external documentation into your project
+    - Ensure AI has access to all necessary technical information
+    - Use tools like Firecrawl to extract documentation from libraries/frameworks
+
+### 3. Phased Implementation Strategy
+
+- **Step-by-Step Execution**
+    - Implement the solution in planned, manageable phases
+    - Consistently reference the design document during implementation
+    - Focus on small, verifiable steps rather than broad changes
+- **Iterative Refinement**
+    - Engage in dialogue with the AI assistant
+    - Make incremental adjustments and clarifications
+    - Don't expect perfection in a single iteration
+- **Dynamic Project Updates**
+    - Configure your AI coding assistant to update project plans after each change
+    - Maintain an up-to-date roadmap reflecting current development state
+    - Document progress and changes in a structured format
+
+### 4. Verification & Testing
+
+- **Continuous Testing**
+    - Follow a testing strategy for each implementation phase
+    - Combine automated tests with manual validation
+    - Regularly validate against original requirements
+    - Ensure backward compatibility
+
+### Key Principles for Success
+
+- **Small, Verifiable Steps**
+    - Instead of: "Add error handling to the entire codebase"
+    - Better: "Identify critical paths needing error handling in the authentication module"
+- **Clear Context Boundaries**
+    - Instead of: "Make this code better"
+    - Better: "Refactor this function to handle these specific edge cases: [list]"
+- **Shared Understanding**
+    - Maintain alignment between your vision and the AI's interpretation
+    - Regularly verify that you and the AI are working toward the same goal
+- **Structured Documentation**
+    - Keep documentation updated throughout development
+    - Use consistent formats for requirements, plans, and technical specifications
+
+### Common Pitfalls to Avoid
+
+- Starting projects without clear planning
+- Providing vague or ambiguous requirements
+- Expecting the AI to understand project context without sufficient information
+- Attempting to implement too much in a single step
+- Neglecting to update project documentation as development progresses
+
+### Benefits of This Approach
+
+- Prevents project abandonment due to increasing complexity
+- Improves code quality through systematic planning and verification
+- Enhances collaboration efficiency between you and the AI assistant
+- Promotes successful project completion with structured guidance
+- Creates maintainable code with comprehensive documentation
+
+By following this structured approach, you can transform Cursor and other AI coding assistants into effective pair programming partners, enhancing your productivity and code quality.
