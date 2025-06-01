@@ -1,64 +1,148 @@
-# Cursor Rules System
+# Engineering Handbook
 
-This repository contains a structured rule system for Cursor AI to enhance coding assistant interactions and improve development workflow.
+A comprehensive engineering handbook designed to improve AI coding agent performance through behavior-first guidance and structured workflows.
 
 ## Overview
 
-Cursor Rules provide a flexible system for guiding AI behavior when working on development projects. This repository contains:
+This handbook provides AI coding agents with:
 
-- Workflow rules for different development activities
-- Technology-specific implementation guidelines
-- Templates for project documentation
-- File tracking mechanisms
+- **Behavior guidance** for consistent development practices
+- **Workflow patterns** for different types of development tasks
+- **Technology-specific context** for Django + SvelteKit projects
+- **Reference documentation** for commands and implementation patterns
+- **Tool integration** guides for various AI agents
 
 ## Directory Structure
 
 ```
-cursor-rules/
-├── .cursor/
-│   └── rules/              # AI behavior rules
-│       ├── projects/       # Technology-specific rules
-│       │   ├── django-backend.mdc
-│       │   └── sveltekit-frontend.mdc
-│       ├── workflows/      # Task-specific workflows
-│       │   ├── structured-coding.mdc
-│       │   ├── frontend-style.mdc
-│       │   └── product-roadmap.mdc
-│       ├── system-prompt.mdc  # Master rules file
-│       └── sketchbook.mdc      # Sketchbook template
-├── CLAUDE.md              # Instructions for Claude Code CLI
-├── file_structure.md      # Tracked file structure
-└── sketchbook.md          # Project journal template
+engineering-handbook/
+├── agent-guidance/           # Core AI agent behavior and workflows
+│   ├── core-system.md       # Master behavior guidance
+│   ├── workflows/           # Task-specific workflows
+│   │   ├── feature-development.md
+│   │   ├── frontend-styling.md
+│   │   └── product-planning.md
+│   ├── tech-context/        # Technology-specific behavior
+│   │   ├── django-behavior.md
+│   │   └── sveltekit-behavior.md
+│   └── templates/           # Documentation templates
+│       ├── project-sketchbook.md
+│       └── session-tracking.md
+├── reference/               # Detailed reference documentation
+│   ├── commands/           # Command references
+│   │   ├── django-commands.md
+│   │   ├── sveltekit-commands.md
+│   │   └── docker-commands.md
+│   └── patterns/           # Implementation patterns
+│       ├── api-integration.md
+│       └── project-structure.md
+├── tools/                  # AI agent integration guides
+│   ├── cursor-integration.md
+│   └── general-ai-agents.md
+├── CLAUDE.md              # Claude Code specific guidance
+└── README.md              # This file
 ```
 
-## Rule Types
+## Core Concepts
 
-### System Prompt (system-prompt.mdc)
+### Behavior-First Approach
 
-The master rule that guides all AI interactions, directing workflow selection and documentation requirements.
+The handbook prioritizes **agent behavior guidance** over comprehensive documentation. AI agents follow structured patterns and access detailed documentation only when needed, keeping context usage efficient.
 
-### Workflow Rules
+### Workflow Selection
 
-- **structured-coding.mdc**: For implementing new features with thorough planning and iterative development
-- **frontend-style.mdc**: For UI/UX design and styling work
-- **product-roadmap.mdc**: For planning features and product requirements
+AI agents analyze tasks and select appropriate workflows:
 
-### Project Rules
+- **Feature Development**: For implementing new functionality with structured planning
+- **Frontend Styling**: For UI/UX work and design implementation  
+- **Product Planning**: For high-level planning and roadmap creation
 
-- **django-backend.mdc**: Guidelines for Django backend implementation
-- **sveltekit-frontend.mdc**: Guidelines for SvelteKit frontend implementation
+### Technology Context
 
-## Template Files
+Specialized guidance for the tech stack:
 
-### Sketchbook (sketchbook.md)
+- **Django Backend**: Models, serializers, views, testing patterns
+- **SvelteKit Frontend**: Components, API integration, state management
 
-A template for maintaining project context and development history. AI agents use this to:
+## Quick Start
 
-- Track active workflows
-- Document development decisions
-- Record implementation patterns
-- Manage open questions
+### For AI Agents
 
-### File Structure (file_structure.md)
+1. Read `agent-guidance/core-system.md` for core behavior patterns
+2. Select appropriate workflow from `agent-guidance/workflows/`
+3. Apply technology-specific guidance from `agent-guidance/tech-context/`
+4. Reference detailed documentation from `reference/` as needed
+5. Maintain project documentation using templates
 
-Automatically generated file showing project structure, updated after file operations.
+### For Developers
+
+1. **Choose your AI agent integration**:
+   - Claude Code: Use existing `CLAUDE.md` 
+   - Cursor: Follow `tools/cursor-integration.md`
+   - Other agents: See `tools/general-ai-agents.md`
+
+2. **Set up project documentation**:
+   ```bash
+   # Create project sketchbook
+   cp agent-guidance/templates/project-sketchbook.md ./sketchbook.md
+   
+   # Initialize file structure tracking
+   git ls-files -c --others --exclude-standard > file_structure.md
+   ```
+
+3. **Configure your AI agent** to reference this handbook for all development tasks
+
+## Key Features
+
+### Consistent Development Patterns
+- Standardized workflows for common development tasks
+- Technology-specific best practices and patterns
+- Structured approach to feature development and planning
+
+### Efficient Context Usage
+- Behavior guidance keeps context lean
+- Detailed reference documentation accessed on-demand
+- Smart workflow selection based on task analysis
+
+### Tool Agnostic
+- Works with Claude Code, Cursor, GitHub Copilot, and other AI agents
+- Standard markdown format for universal compatibility
+- Integration guides for popular development tools
+
+### Project Continuity
+- Sketchbook template for tracking development sessions
+- Decision documentation and reasoning
+- File structure awareness and tracking
+
+## Integration Examples
+
+### Django + SvelteKit Full-Stack
+- Type-safe API integration with OpenAPI
+- TanStack Query for frontend data management
+- Celery for background task processing
+- Docker Compose for development environment
+
+### Development Workflow
+1. AI agent selects appropriate workflow
+2. Applies technology-specific patterns
+3. Documents decisions in project sketchbook
+4. Maintains file structure awareness
+5. References detailed commands/patterns as needed
+
+## Contributing
+
+When extending the handbook:
+
+1. **Behavior changes** go in `agent-guidance/`
+2. **Detailed documentation** goes in `reference/`
+3. **Tool integrations** go in `tools/`
+4. **Keep context efficient** - prioritize guidance over comprehensive docs
+5. **Test with AI agents** to ensure patterns work effectively
+
+## Benefits
+
+- **Improved AI agent performance** through structured guidance
+- **Consistent development practices** across projects and sessions
+- **Reduced context overhead** with behavior-first approach
+- **Technology-specific expertise** for Django + SvelteKit stack
+- **Tool flexibility** supporting multiple AI coding agents

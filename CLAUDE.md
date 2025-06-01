@@ -1,78 +1,107 @@
-# Job Funnel Project Guidelines
+# CLAUDE.md
 
-## Project Structure
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-This repository contains several sub-projects:
-- Frontend (SvelteKit)
-- Backend (Django)
-- Browser automation extension
-- Job scraping tools
-- Auto-apply agent
+## Repository Overview
 
-## Development Guidelines
+This is an engineering handbook containing a structured rule system for Cursor AI and various project components. The repository serves as a central documentation hub for development workflows, AI behavior rules, and project management templates.
 
-### Frontend Guidelines
-- Use SvelteKit for frontend development
-- Follow Tailwind CSS for styling
-- Use TypeScript for all components
-- Keep components small and reusable
-- Prefer server-side rendering where possible
+## Key Architecture
 
-### Backend Guidelines
-- Use Django for backend development
-- Follow DRY principles and Django best practices
-- Create comprehensive tests for all endpoints
-- Document API endpoints using OpenAPI/Swagger
-- Properly handle authentication and permissions
+### Cursor Rules System
+- **System Prompt** (.cursor/rules/system-prompt.mdc): Master rule file that guides all AI interactions and workflow selection
+- **Workflow Rules** (.cursor/rules/workflows/): Task-specific rules for structured coding, frontend styling, and product roadmapping
+- **Project Rules** (.cursor/rules/projects/): Technology-specific guidelines for Django backend and SvelteKit frontend implementations
 
-## Structured Workflows
+### Documentation Templates
+- **sketchbook.md**: Project journal template for tracking development history, decisions, and implementation patterns
+- **file_structure.md**: Auto-generated file listing (updated after file operations)
 
-When appropriate, follow these workflows:
+## Core Commands
 
-### Feature Implementation Workflow
-1. Understand the requirements thoroughly
-2. Plan the implementation approach
-3. Create or modify necessary files
-4. Write tests for the functionality
-5. Implement the feature
-6. Verify all tests pass
-7. Document the changes in sketchbook.md
-
-### Bug Fix Workflow
-1. Reproduce the issue first
-2. Identify the root cause
-3. Plan the fix
-4. Implement the fix
-5. Add tests to prevent regression
-6. Verify the fix works
-7. Document the bug and solution in sketchbook.md
-
-### Refactoring Workflow
-1. Identify the code to be refactored
-2. Document current behavior to ensure it's preserved
-3. Plan the refactoring approach
-4. Make incremental changes 
-5. Keep running tests to ensure functionality is preserved
-6. Document the improvements in sketchbook.md
-
-## File Tracking
-
-After any file system operation (creating, renaming, or deleting files), run:
+### File Structure Management
+After any file system operations (create/rename/delete), update the file structure:
 ```bash
 git ls-files -c --others --exclude-standard > file_structure.md
 ```
 
-This command outputs all tracked and untracked (but not ignored) files to file_structure.md for easy reference.
+### Docker Services (for multi-component projects)
+```bash
+# Start only database (recommended for development)
+docker compose up db -d
 
-## Sketchbook
+# Start all services
+docker compose up
 
-Always keep track of important decisions, design patterns, and architectural choices in sketchbook.md. This file serves as a living document of the project's evolution.
+# Reset database (clears all data)
+docker compose down -v
+```
 
-## System Prompts
+### Django Backend (when present)
+```bash
+# Install dependencies
+poetry install
 
-When working with coding agents, they should:
-1. Decide which workflow is appropriate for the current task
-2. Follow the chosen workflow systematically 
-3. Keep track of changes and decisions in sketchbook.md
-4. Update file_structure.md after filesystem changes
-5. Always consider both frontend and backend implications of changes
+# Activate virtual environment
+poetry shell
+
+# Run migrations
+python manage.py migrate
+
+# Create superuser
+python manage.py setup
+
+# Start development server
+python manage.py runserver
+```
+
+### Frontend Development (when present)
+```bash
+# Install dependencies
+npm install --include=dev
+
+# Start development server
+npm run dev
+
+# Type checking
+npm run check
+```
+
+## Development Workflow
+
+1. **Analyze requests** and select appropriate workflow from .cursor/rules/workflows/
+2. **Document approach** in sketchbook.md following the template structure
+3. **Apply technology-specific rules** based on project context
+4. **Update file_structure.md** after file operations
+5. **Maintain sketchbook entries** with implementation details and decisions
+
+## Important Patterns
+
+### API Integration (Full-stack projects)
+- Backend generates OpenAPI schema via Django Spectacular
+- Frontend uses typed API client (openapi-fetch) for type-safe requests
+- TanStack Query handles caching and state management
+- JWT authentication automatically added via middleware
+
+### Asynchronous Task Processing
+- Celery workers for background tasks
+- Redis as message broker and queue
+- Flower UI for monitoring tasks and workers
+- Celery Beat for scheduled tasks
+
+## Environment Setup
+
+Create `.env` files from `.env.example` templates in both frontend and backend directories. Key variables:
+- Database connection settings
+- API keys (OpenAI, etc.)
+- Service configuration
+
+## Project Structure Awareness
+
+The repository may contain multiple project components:
+- Individual project folders (frontend/backend)
+- Shared documentation and rules
+- Media assets and artifacts
+- Deprecated/legacy components
+
+Always check project context before applying technology-specific rules or making assumptions about available tooling.

@@ -1,33 +1,27 @@
-.cursor/hooks/file_operation.sh
-file_structure.md
-.DS_Store
+agent-guidance/core-system.md
+agent-guidance/tech-context/django-behavior.md
+agent-guidance/tech-context/sveltekit-behavior.md
+agent-guidance/templates/project-sketchbook.md
+agent-guidance/templates/session-tracking.md
+agent-guidance/workflows/feature-development.md
+agent-guidance/workflows/frontend-styling.md
+agent-guidance/workflows/product-planning.md
+artifacts/Screen Recording 2025-05-27 at 11.25.43_1.25x_compressed.txt
+reference/commands/django-commands.md
+reference/commands/docker-commands.md
+reference/commands/sveltekit-commands.md
+reference/patterns/api-integration.md
+reference/patterns/project-structure.md
+tools/cursor-integration.md
+tools/general-ai-agents.md
 .cursor/rules/projects/django-backend.mdc
 .cursor/rules/projects/sveltekit-frontend.mdc
+.cursor/rules/sketchbook.mdc
 .cursor/rules/system-prompt.mdc
 .cursor/rules/workflows/frontend-style.mdc
 .cursor/rules/workflows/product-roadmap.mdc
 .cursor/rules/workflows/structured-coding.mdc
 CLAUDE.md
-JobFunnel.code-workspace
-about
-auto-apply-agent
-browser-automation-extension
-career-sherpa
-deprecated/.DS_Store
-deprecated/depracated-job-funnel-v0
-deprecated/depracated-job-funnel-v1
-job-scraping
-jobfunnel-backend
-jobfunnel-frontend
-media/DALL-E Whale 2.png
-media/DALL-E Whale.png
-media/circle cut whale.png
-media/job-funnel landing page.png
-media/vacancy-connect.png
-media/whale zoomed.png
-media/whale.png
-media/whale128.png
-media/whale16.png
-media/whale32.png
-media/whale48.png
+README.md
+file_structure.md
 sketchbook.md

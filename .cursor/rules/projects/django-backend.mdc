@@ -59,5 +59,7 @@ class ModelName(BaseModel):
     - After creating or editing tests, run `pytest project/path/or/folder/to/test` to make sure they pass
     - Afterwards also run all tests with `pytest` to assure you didn't cause any regressions
 
+- after updating views, sync the openAPI schema with 'TODO: fill out command here once this is set up in a proper monorepo'
+
 Try to stay consistent with the project's style and best practices. So if you write any of these files from scratch, first inspect existing files to see how those are written to make sure you stay consistent with the project. Eg if you create a new views.py file to do this and don't have other examples in your context yet, first inspect existing views.py files to see how those are written to make sure you stay consistent with the project.
 
