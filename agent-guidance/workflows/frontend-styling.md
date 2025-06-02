@@ -12,38 +12,52 @@ Use when the primary goal is aesthetics, usability, or design language consisten
 
 ## Step-by-Step Guide
 
-### 1. Select Source UI
+### 1. Understand Visual Requirements
 
-- Find an existing UI design on platforms like Dribbble, focusing solely on styling, not functionality.
+- Ask the user if they have a reference design or visual inspiration
+- If they provide an image or reference, analyze it for styling patterns
+- Focus on extracting styling elements rather than functionality
 
-### 2. Generate Detailed Style Guide with LLM
+### 2. Generate Detailed Style Guide
 
-- Paste the selected UI image into an AI assistant (e.g., Claude).
-- Use the following detailed prompt:
+- When analyzing visual references, create a comprehensive style guide that includes:
+  - Color palette and usage patterns
+  - Typography (fonts, sizes, weights, line heights)
+  - Spacing system (margins, padding, gaps)
+  - Border styles and radii
+  - Shadow and elevation patterns
+  - Animation and transition preferences
+  - Overall visual mood and feel
 
-```
-I need you to describe, in detail, the styling and branding on this UI. The engineer who will implement this design cannot see it. Write a highly detailed stylesheet/spec that clearly explains how to replicate the overall styling—colors, fonts, spacing, feel, overlaps, etc. Focus purely on the visual aesthetics and vibes rather than specific layout elements.
-```
+### 3. Confirm Style Direction
 
-### 3. Refine and Prepare the Style Guide
+- Present the extracted style guide to the user for validation
+- Ask clarifying questions about specific design preferences:
+  - "Should I apply this color scheme throughout the entire application?"
+  - "Do you want to maintain these exact spacing ratios?"
+  - "Are there any existing brand guidelines I should follow?"
 
-- Remove unnecessary filler information for clarity and precision.
-- Insert the refined style guide into the following prompt template:
+### 4. Implementation Strategy
 
-```
-<style_guide>
-PASTE YOUR STYLE GUIDE HERE
-</style_guide>
+- Break down the styling implementation into logical phases:
+  - Global styles and CSS variables
+  - Component-specific styling
+  - Responsive design adjustments
+  - Interaction states (hover, focus, active)
+- Implement styles systematically, ensuring consistency across components
+- Use modern CSS practices and maintain clean, maintainable stylesheets
 
-I want you to apply this style guide to restyle my entire app. Ensure the result perfectly matches the described aesthetics.
-```
+### 5. Iterative Refinement
 
-### 4. Implementation with AI Coding Assistant
+- After each styling update, summarize the changes made
+- Ask for feedback on specific elements
+- Make incremental adjustments based on user preferences
+- Ensure the result matches the desired aesthetics
 
-- Paste the prompt into Cursor Composer (using Sonnet 3.7) or Claude-Code.
-- Iteratively refine as necessary until the desired styling is achieved.
+## Best Practices
 
-## Benefits
-
-- Efficient and effective replication of professional design aesthetics.
-- Rapid styling iterations without direct visual references.
+- Always start by understanding the visual goals before implementing
+- Maintain consistency in styling patterns across the application
+- Document style decisions in comments for future reference
+- Consider accessibility when applying visual styles
+- Test responsive behavior across different screen sizes

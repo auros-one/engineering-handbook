@@ -14,34 +14,61 @@ Use when you need to translate ideas into structured development plans or create
 
 ### Step 1: Requirement & Definition
 
-- Discuss and define clear feature requirements.
-- Document constraints and acceptance criteria clearly.
+- Engage the user in discussion to understand their product vision
+- Ask clarifying questions about:
+  - Target users and their needs
+  - Key problems to solve
+  - Success metrics and goals
+  - Technical and business constraints
+- Document requirements and acceptance criteria in a structured format
 
 ### Step 2: Roadmap Structuring
 
-- Organize your roadmap into clearly defined sections (e.g., requirements, design, data model, API).
-- Clearly outline technical spikes (feasibility prototypes), data model designs, and other relevant tasks.
+- Create a comprehensive roadmap with clearly defined sections:
+  - Executive summary
+  - Requirements and user stories
+  - Technical architecture overview
+  - Data model design
+  - API specifications
+  - Implementation phases
+  - Timeline and milestones
+- Present the structure to the user for feedback and approval
 
 ### Key Steps for Each Feature
 
-- Conduct a technical spike to verify assumptions.
-- Clearly document data models and initial data setup.
-- Iteratively execute tasks with continuous reference to documentation.
+- Propose technical spikes to verify feasibility and assumptions
+- Design and document data models with clear relationships
+- Define API endpoints and integration points
+- Break down implementation into manageable tasks
+- Identify dependencies and potential risks
 
 ### Continuous Validation & Updates
 
-- Continuously validate results against original requirements.
-- Regularly update documentation to reflect current status and changes.
+- Regularly check alignment with original requirements
+- Update documentation to reflect current decisions and changes
+- Summarize progress at key milestones
+- Ask for user feedback on prioritization and direction
 
 ## Best Practices
 
-- Small, verifiable instructions rather than broad directives.
-- Clear context and boundary specifications.
-- Consistent iterative refinement through structured dialogues.
-- Dynamic and continually updated documentation.
+- Break complex features into small, verifiable components
+- Provide clear context and rationale for each recommendation
+- Maintain consistent communication throughout the planning process
+- Keep documentation dynamic and up-to-date
+- Consider both technical feasibility and business value
+
+## Key Questions to Ask
+
+- "What are the must-have features versus nice-to-haves?"
+- "Are there any existing systems this needs to integrate with?"
+- "What's the target timeline for the MVP?"
+- "Who are the primary stakeholders I should consider?"
+- "What are the main technical constraints or preferences?"
 
 ## Benefits
 
-- Prevents ambiguity, misunderstandings, and project stagnation.
-- Ensures structured, successful project completion.
-- Produces clear, maintainable code supported by comprehensive documentation.
+- Prevents ambiguity and misunderstandings early in the process
+- Ensures alignment between technical implementation and business goals
+- Creates a clear roadmap that guides development
+- Produces comprehensive documentation for team collaboration
+- Enables informed decision-making throughout the project lifecycle
