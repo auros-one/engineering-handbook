@@ -1,3 +1,9 @@
+---
+name: "Product Planning"
+description: "Apply when working on high-level project planning, feature definition, prioritization, or product strategy. This workflow helps structure the process of defining requirements, analyzing user needs, organizing feature development, and planning implementation timelines."
+triggers: ["planning", "roadmap", "strategy", "requirements", "prioritization", "product"]
+---
+
 # Product Roadmap Workflow
 
 Apply when working on high-level project planning, feature definition, prioritization, or product strategy. This workflow helps structure the process of defining requirements, analyzing user needs, organizing feature development, and planning implementation timelines.

@@ -1,3 +1,9 @@
+---
+name: "Feature Development"
+description: "Apply when implementing new features or complex functionality that spans across components or services. Ideal for features requiring careful planning, multi-step execution, or integration of multiple system parts."
+triggers: ["feature", "implementation", "new functionality", "complex", "multi-step", "integration"]
+---
+
 # Feature Development Workflow
 
 Apply when implementing new features or complex functionality that spans across components or services. Ideal for features requiring careful planning, multi-step execution, or integration of multiple system parts.
@@ -7,51 +13,51 @@ This workflow focuses on thorough requirement analysis, documentation, step-by-s
 ## 1. Problem Definition & Requirement Analysis
 
 ### Start with Discussion, Not Code
-- Instruct the agent **not** to generate code immediately
-- Use AI to explore and refine feature requirements
+- Don't generate code immediately
+- Engage the user in a conversation to explore and refine feature requirements
 - Document key constraints and acceptance criteria
 
 ### Detailed Feature Description
-- Provide as much contextual information as possible
-- Reference relevant files, objects, and existing implementations
-- Specify integration points and dependencies
+- Ask the user to provide as much contextual information as possible
+- Request references to relevant files, objects, and existing implementations
+- Clarify integration points and dependencies
 
 ### Clarification Process
-- Allow the agent to ask follow-up questions
+- Ask follow-up questions to understand the requirements fully
 - Address ambiguities before proceeding to implementation
-- Define clear boundaries for the scope
+- Define clear boundaries for the scope with the user
 
 ## 2. Documentation & Planning
 
 ### Generate a Structured PRD (Product Requirements Document)
-- Use a standardized template for consistency
+- Create a standardized template for consistency
 - Include acceptance criteria for each requirement
 - Document technical constraints and dependencies
 
 ### Design Documentation
 - Break down implementation into clear, logical phases
 - Define interfaces between components
-- Create a shared understanding of architecture
+- Present the architecture plan to the user for approval
 
 ### Comprehensive Context Provision
-- Import relevant external documentation into your project
-- Ensure AI has access to all necessary technical information
-- Use tools like Firecrawl to extract documentation from libraries/frameworks
+- Request access to relevant external documentation
+- Ask for any necessary technical information not yet provided
+- Use tools like Firecrawl to extract documentation from libraries/frameworks when needed
 
 ## 3. Phased Implementation Strategy
 
 ### Step-by-Step Execution
 - Implement the solution in planned, manageable phases
-- Consistently reference the design document during implementation
+- Reference the design document consistently during implementation
 - Focus on small, verifiable steps rather than broad changes
 
 ### Iterative Refinement
-- Engage in dialogue with the AI assistant
-- Make incremental adjustments and clarifications
-- Don't expect perfection in a single iteration
+- Engage in dialogue with the user throughout implementation
+- Make incremental adjustments based on feedback
+- Don't attempt to achieve perfection in a single iteration
 
 ### Dynamic Project Updates
-- Configure your AI coding assistant to update project plans after each change
+- Update project plans after each significant change
 - Maintain an up-to-date roadmap reflecting current development state
 - Document progress and changes in a structured format
 
@@ -59,23 +65,23 @@ This workflow focuses on thorough requirement analysis, documentation, step-by-s
 
 ### Continuous Testing
 - Follow a testing strategy for each implementation phase
-- Combine automated tests with manual validation
+- Combine automated tests with manual validation suggestions
 - Regularly validate against original requirements
 - Ensure backward compatibility
 
 ## Key Principles for Success
 
 ### Small, Verifiable Steps
-- Instead of: "Add error handling to the entire codebase"
-- Better: "Identify critical paths needing error handling in the authentication module"
+- Instead of: Attempting to "Add error handling to the entire codebase"
+- Better: "Let me identify critical paths needing error handling in the authentication module first"
 
 ### Clear Context Boundaries
-- Instead of: "Make this code better"
-- Better: "Refactor this function to handle these specific edge cases: [list]"
+- Instead of: Accepting vague requests like "Make this code better"
+- Better: Ask for specifics: "Which aspects would you like me to improve? Performance, readability, error handling, or specific edge cases?"
 
 ### Shared Understanding
-- Maintain alignment between your vision and the AI's interpretation
-- Regularly verify that you and the AI are working toward the same goal
+- Regularly confirm alignment between the user's vision and your interpretation
+- Summarize understanding before implementing major changes
 
 ### Structured Documentation
 - Keep documentation updated throughout development
@@ -83,9 +89,9 @@ This workflow focuses on thorough requirement analysis, documentation, step-by-s
 
 ## Common Pitfalls to Avoid
 
-- Starting projects without clear planning
-- Providing vague or ambiguous requirements
-- Expecting the AI to understand project context without sufficient information
+- Starting implementation without clear planning
+- Accepting vague or ambiguous requirements without clarification
+- Assuming project context without requesting sufficient information
 - Attempting to implement too much in a single step
 - Neglecting to update project documentation as development progresses
 
@@ -93,8 +99,8 @@ This workflow focuses on thorough requirement analysis, documentation, step-by-s
 
 - Prevents project abandonment due to increasing complexity
 - Improves code quality through systematic planning and verification
-- Enhances collaboration efficiency between you and the AI assistant
+- Enhances collaboration efficiency with the user
 - Promotes successful project completion with structured guidance
 - Creates maintainable code with comprehensive documentation
 
-By following this structured approach, you can transform AI coding assistants into effective pair programming partners, enhancing your productivity and code quality.
+By following this structured approach, you can become an effective pair programming partner, enhancing productivity and code quality.

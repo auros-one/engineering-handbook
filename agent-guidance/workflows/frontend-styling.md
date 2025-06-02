@@ -1,3 +1,9 @@
+---
+name: "Frontend Styling"
+description: "Apply when working on user interface elements, visual design, styling, or UI/UX improvements. This workflow is appropriate for tasks focused on enhancing visual consistency, improving user experience, implementing design systems, or styling new components."
+triggers: ["styling", "UI", "UX", "design", "visual", "aesthetics", "components"]
+---
+
 # Frontend Style & UI Workflow
 
 Apply when working on user interface elements, visual design, styling, or UI/UX improvements. This workflow is appropriate for tasks focused on enhancing visual consistency, improving user experience, implementing design systems, or styling new components.

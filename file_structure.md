@@ -1,10 +1,5 @@
-.cursor/rules/projects/django-backend.mdc
-.cursor/rules/projects/sveltekit-frontend.mdc
-.cursor/rules/sketchbook.mdc
-.cursor/rules/system-prompt.mdc
-.cursor/rules/workflows/frontend-style.mdc
-.cursor/rules/workflows/product-roadmap.mdc
-.cursor/rules/workflows/structured-coding.mdc
+scripts/README.md
+scripts/list-workflows.py
 CLAUDE.md
 README.md
 agent-guidance/core-system.md

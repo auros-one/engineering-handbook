@@ -68,11 +68,15 @@ Specialized guidance for the tech stack:
 
 ### For AI Agents
 
-1. Read `agent-guidance/core-system.md` for core behavior patterns
-2. Select appropriate workflow from `agent-guidance/workflows/`
-3. Apply technology-specific guidance from `agent-guidance/tech-context/`
-4. Reference detailed documentation from `reference/` as needed
-5. Maintain project documentation using templates
+1. **Discover workflows** using the metadata script:
+   ```bash
+   python scripts/list-workflows.py --query "your task description"
+   ```
+2. **Read core guidance**: `agent-guidance/core-system.md` for behavior patterns
+3. **Select appropriate workflow** from `agent-guidance/workflows/`
+4. **Apply technology context** from `agent-guidance/tech-context/`
+5. **Reference detailed documentation** from `reference/` as needed
+6. **Maintain documentation** using templates
 
 ### For Developers
 

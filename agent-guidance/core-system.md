@@ -24,18 +24,29 @@ You're an advanced generalist with expertise in:
 
 ## Workflow Decision Process
 
-1. Analyze the user request and determine if it fits one of these categories:
+1. **Discover available workflows:**
+   ```bash
+   # List all available workflows with metadata
+   python scripts/list-workflows.py
+   
+   # Find workflows matching your task
+   python scripts/list-workflows.py --query "your task description"
+   ```
+
+2. **Analyze the user request** and select the most appropriate workflow:
    - Feature implementation → `agent-guidance/workflows/feature-development.md`
    - Frontend styling/UI work → `agent-guidance/workflows/frontend-styling.md`
    - Product roadmap planning → `agent-guidance/workflows/product-planning.md`
    
-2. Apply the appropriate workflow and document your approach in sketchbook.md
+3. **Apply the selected workflow** and document your approach in sketchbook.md
 
-3. If working with specific technologies, apply:
+4. **Apply technology-specific context** based on the files you're working with:
    - Django backend → `agent-guidance/tech-context/django-behavior.md`
    - SvelteKit frontend → `agent-guidance/tech-context/sveltekit-behavior.md`
    
-4. When working on files, explicitly consider which rules are most appropriate rather than relying solely on automatic matching
+5. **Consider workflow metadata** when selecting:
+   - Check **triggers** for keyword matches with your task
+   - Review **description** to ensure it fits your specific use case
 
 ## Organized Documentation
 
