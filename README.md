@@ -29,6 +29,11 @@ engineering-handbook/
 │       ├── project-sketchbook.md
 │       └── session-tracking.md
 ├── reference/               # Detailed reference documentation
+│   ├── architecture/       # Architecture guidelines and decisions
+│   │   ├── guidelines.md
+│   │   └── decision-records.md
+│   ├── processes/          # Engineering processes and standards
+│   │   └── pull-requests.md
 │   ├── commands/           # Command references
 │   │   ├── django-commands.md
 │   │   ├── sveltekit-commands.md
@@ -102,6 +107,8 @@ Specialized guidance for the tech stack:
 - Standardized workflows for common development tasks
 - Technology-specific best practices and patterns
 - Structured approach to feature development and planning
+- Comprehensive pull request standards and review process
+- Architecture guidelines with clear layer boundaries
 
 ### Efficient Context Usage
 - Behavior guidance keeps context lean
