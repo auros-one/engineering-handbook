@@ -49,10 +49,11 @@ docker compose logs -f web  # Follow logs
 
 ### Database Reset
 ```bash
-# Complete database reset
-docker compose down -v    # Stop and remove volumes
-docker compose up db -d   # Start database
-# Then run migrations in your application
+docker compose down -v
+docker compose up db -d
+sleep 1.5
+python manage.py migrate
+python manage.py setup_dev_env
 ```
 
 ### Service Restart
