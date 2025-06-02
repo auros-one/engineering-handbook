@@ -1,19 +1,3 @@
-agent-guidance/core-system.md
-agent-guidance/tech-context/django-behavior.md
-agent-guidance/tech-context/sveltekit-behavior.md
-agent-guidance/templates/project-sketchbook.md
-agent-guidance/templates/session-tracking.md
-agent-guidance/workflows/feature-development.md
-agent-guidance/workflows/frontend-styling.md
-agent-guidance/workflows/product-planning.md
-artifacts/Screen Recording 2025-05-27 at 11.25.43_1.25x_compressed.txt
-reference/commands/django-commands.md
-reference/commands/docker-commands.md
-reference/commands/sveltekit-commands.md
-reference/patterns/api-integration.md
-reference/patterns/project-structure.md
-tools/cursor-integration.md
-tools/general-ai-agents.md
 .cursor/rules/projects/django-backend.mdc
 .cursor/rules/projects/sveltekit-frontend.mdc
 .cursor/rules/sketchbook.mdc
@@ -23,5 +7,21 @@ tools/general-ai-agents.md
 .cursor/rules/workflows/structured-coding.mdc
 CLAUDE.md
 README.md
+agent-guidance/core-system.md
+agent-guidance/tech-context/django-behavior.md
+agent-guidance/tech-context/sveltekit-behavior.md
+agent-guidance/templates/project-sketchbook.md
+agent-guidance/templates/session-tracking.md
+agent-guidance/workflows/feature-development.md
+agent-guidance/workflows/frontend-styling.md
+agent-guidance/workflows/product-planning.md
+artifacts/Screen Recording 2025-05-27 at 11.25.43_1.25x_compressed.txt
 file_structure.md
+reference/commands/django-commands.md
+reference/commands/docker-commands.md
+reference/commands/sveltekit-commands.md
+reference/patterns/api-integration.md
+reference/patterns/project-structure.md
 sketchbook.md
+tools/cursor-integration.md
+tools/general-ai-agents.md
