@@ -1,3 +1,9 @@
+---
+name: "Pull Request Process"
+description: "Apply when creating, reviewing, or managing pull requests. This workflow ensures proper PR standards, systematic review classification, and adherence to definition of done criteria."
+triggers: ["pull request", "PR", "code review", "merge", "review feedback", "definition of done"]
+---
+
 # Pull Request Standards & Process
 
 ## Workflow Overview
