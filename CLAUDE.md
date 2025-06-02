@@ -75,6 +75,24 @@ npm run check
 4. **Update file_structure.md** after file operations
 5. **Maintain sketchbook entries** with implementation details and decisions
 
+### Multi-Terminal Development Setup
+For full-stack projects requiring coordinated service management:
+```bash
+# Terminal 1: Backend Database
+docker compose up db -d
+
+# Terminal 2: Backend Application  
+cd backend/ && poetry shell && python manage.py runserver
+
+# Terminal 3: Frontend Development
+cd frontend/ && npm run dev
+
+# Terminal 4: Background Services (optional)
+cd backend/ && celery -A project worker -l info
+```
+
+Refer to agent-guidance/workflows/multi-project-development.md for comprehensive multi-service coordination patterns.
+
 ## Important Patterns
 
 ### API Integration (Full-stack projects)
