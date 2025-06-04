@@ -1,5 +1,4 @@
-scripts/README.md
-scripts/list-workflows.py
+.gitignore
 CLAUDE.md
 README.md
 agent-guidance/core-system.md
@@ -10,13 +9,17 @@ agent-guidance/templates/session-tracking.md
 agent-guidance/workflows/feature-development.md
 agent-guidance/workflows/frontend-styling.md
 agent-guidance/workflows/product-planning.md
+agent-guidance/workflows/pull-requests.md
 artifacts/Screen Recording 2025-05-27 at 11.25.43_1.25x_compressed.txt
 file_structure.md
+reference/architecture/decision-records.md
+reference/architecture/guidelines.md
 reference/commands/django-commands.md
 reference/commands/docker-commands.md
 reference/commands/sveltekit-commands.md
 reference/patterns/api-integration.md
 reference/patterns/project-structure.md
+scripts/README.md
+scripts/copy-all.py
+scripts/list-workflows.py
 sketchbook.md
-tools/cursor-integration.md
-tools/general-ai-agents.md
