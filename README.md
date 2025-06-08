@@ -107,6 +107,8 @@ Specialized guidance for the tech stack:
 - Standardized workflows for common development tasks
 - Technology-specific best practices and patterns
 - Structured approach to feature development and planning
+- **Comprehensive API integration templates** with production-ready TanStack Query examples
+- **Complete UI component patterns** with error handling, loading states, and accessibility
 - Comprehensive pull request standards and review process
 - Architecture guidelines with clear layer boundaries
 
@@ -114,6 +116,7 @@ Specialized guidance for the tech stack:
 - Behavior guidance keeps context lean
 - Detailed reference documentation accessed on-demand
 - Smart workflow selection based on task analysis
+- **Production-ready code templates** for immediate implementation
 
 ### Tool Agnostic
 - Works with Claude Code, Cursor, GitHub Copilot, and other AI agents

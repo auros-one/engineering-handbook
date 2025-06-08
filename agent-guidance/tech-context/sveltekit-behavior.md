@@ -46,26 +46,24 @@ This project uses Django for the backend and SvelteKit for the frontend. Maintai
 **Key concepts:**
 - TanStack Query provides data fetching and caching
 - OpenAPI-Fetch generates TypeScript client from backend API
-- Generated types are in `project/lib/api/backend-api-schema.d.ts`
+- Generated types are in `project/lib/api/schema.d.ts` (very large file, grep for relevant types)
 - Authentication middleware is automatically added (grep for 'createClient')
 
-**Query Implementation:**
+**For comprehensive, production-ready templates with complete error handling and UI patterns, see:**
+📖 **[API Integration Patterns - Complete Query Implementation Template](../../reference/patterns/api-integration.md#complete-query-implementation-template)**
+📖 **[API Integration Patterns - Complete Mutation Implementation Template](../../reference/patterns/api-integration.md#complete-mutation-implementation-template)**
+
+**Basic Query Pattern:**
 ```svelte
 <script lang="ts">
     import type { components } from '$lib/api/backend-api-schema';
     import { createQuery, useQueryClient } from '@tanstack/svelte-query';
     import { apiClient } from '$lib/api';
-    import Spinner from '$lib/components/loading/Spinner.svelte';
 
     // Type definitions
     type ResponseType = components['schemas']['YourSchemaType'];
-    type ErrorType = Error;
 
-    // Query client for cache management
-    const queryClient = useQueryClient();
-
-    // Create query
-    const query = createQuery<ResponseType, ErrorType>({
+    const query = createQuery<ResponseType>({
         queryKey: ['uniqueKey', optionalId],
         queryFn: async () => {
             const { data, error } = await apiClient.GET('/your/endpoint/', {
@@ -80,19 +78,16 @@ This project uses Django for the backend and SvelteKit for the frontend. Maintai
             return data;
         },
         staleTime: 5 * 60 * 1000,
-        cacheTime: 10 * 60 * 1000,
         enabled: Boolean(optionalId),
-        retry: 3,
     });
 
-    // Reactive access
     $: data = $query.data;
     $: isLoading = $query.isPending;
     $: error = $query.error;
 </script>
 ```
 
-**Mutation Implementation:**
+**Basic Mutation Pattern:**
 ```svelte
 <script lang="ts">
     import { createMutation, useQueryClient } from '@tanstack/svelte-query';
@@ -162,3 +157,26 @@ Before creating new files:
 4. **Use consistent naming** and file structure patterns
 
 **Example:** When creating new views or components, first examine existing implementations to maintain project consistency.
+
+## UI Implementation Best Practices
+
+### Loading States
+- Use consistent loading spinners and indicators
+- Provide meaningful loading messages for longer operations
+- Maintain layout stability during loading transitions
+
+### Error Handling
+- Display user-friendly error messages
+- Provide actionable error states with retry options
+- Use consistent error styling across the application
+
+### Form Handling
+- Implement proper validation with real-time feedback
+- Use loading states during form submission
+- Provide clear success/error feedback after submission
+
+### Accessibility
+- Include proper ARIA labels and roles
+- Ensure keyboard navigation works correctly
+- Maintain proper focus management
+- Use semantic HTML elements
