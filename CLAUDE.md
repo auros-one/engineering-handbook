@@ -8,10 +8,12 @@ This is an engineering handbook containing a structured rule system for Cursor A
 
 ## Key Architecture
 
-### Cursor Rules System
-- **System Prompt** (.cursor/rules/system-prompt.mdc): Master rule file that guides all AI interactions and workflow selection
-- **Workflow Rules** (.cursor/rules/workflows/): Task-specific rules for structured coding, frontend styling, and product roadmapping
-- **Project Rules** (.cursor/rules/projects/): Technology-specific guidelines for Django backend and SvelteKit frontend implementations
+### Core Guidance System
+- **Core System** (agent-guidance/core-system.md): Main entry point that guides all AI interactions and workflow selection
+- **Workflow Rules** (agent-guidance/workflows/): Task-specific rules for structured coding, frontend styling, product planning, and pull requests
+  - Discover workflows: `python scripts/list-workflows.py`
+  - Find specific workflow: `python scripts/list-workflows.py --query "your task"`
+- **Technology Context** (agent-guidance/tech-context/): Technology-specific guidelines for Django backend and SvelteKit frontend implementations
 
 ### Documentation Templates
 - **sketchbook.md**: Project journal template for tracking development history, decisions, and implementation patterns

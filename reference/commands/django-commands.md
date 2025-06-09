@@ -149,11 +149,6 @@ cp .env.example .env
 
 ## Performance and Monitoring
 
-### Development Tools
-- Django Debug Toolbar (if installed)
-- Django Extensions (if installed)
-- Profiling tools for query optimization
-
 ### Query Optimization
 - Use `select_related()` for foreign keys
 - Use `prefetch_related()` for many-to-many and reverse foreign keys  

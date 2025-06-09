@@ -1,3 +1,4 @@
+agent-guidance/workflows/meta-prompt.md
 .gitignore
 CLAUDE.md
 README.md
@@ -10,7 +11,6 @@ agent-guidance/workflows/feature-development.md
 agent-guidance/workflows/frontend-styling.md
 agent-guidance/workflows/product-planning.md
 agent-guidance/workflows/pull-requests.md
-artifacts/Screen Recording 2025-05-27 at 11.25.43_1.25x_compressed.txt
 file_structure.md
 reference/architecture/decision-records.md
 reference/architecture/guidelines.md

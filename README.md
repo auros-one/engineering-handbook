@@ -41,9 +41,8 @@ engineering-handbook/
 │   └── patterns/           # Implementation patterns
 │       ├── api-integration.md
 │       └── project-structure.md
-├── tools/                  # AI agent integration guides
-│   ├── cursor-integration.md
-│   └── general-ai-agents.md
+├── scripts/                 # Utility scripts
+│   └── list-workflows.py    # Workflow discovery tool
 ├── CLAUDE.md              # Claude Code specific guidance
 └── README.md              # This file
 ```
@@ -85,12 +84,7 @@ Specialized guidance for the tech stack:
 
 ### For Developers
 
-1. **Choose your AI agent integration**:
-   - Claude Code: Use existing `CLAUDE.md` 
-   - Cursor: Follow `tools/cursor-integration.md`
-   - Other agents: See `tools/general-ai-agents.md`
-
-2. **Set up project documentation**:
+1. **Set up project documentation**:
    ```bash
    # Create project sketchbook
    cp agent-guidance/templates/project-sketchbook.md ./sketchbook.md
@@ -99,7 +93,10 @@ Specialized guidance for the tech stack:
    git ls-files -c --others --exclude-standard > file_structure.md
    ```
 
-3. **Configure your AI agent** to reference this handbook for all development tasks
+2. **Configure your AI agent** to:
+   - Use `CLAUDE.md` for Claude Code specific guidance
+   - Reference `agent-guidance/core-system.md` as the main entry point
+   - Follow workflows from `agent-guidance/workflows/`
 
 ## Key Features
 
@@ -121,7 +118,7 @@ Specialized guidance for the tech stack:
 ### Tool Agnostic
 - Works with Claude Code, Cursor, GitHub Copilot, and other AI agents
 - Standard markdown format for universal compatibility
-- Integration guides for popular development tools
+- Core guidance in `agent-guidance/core-system.md` serves as main entry point
 
 ### Project Continuity
 - Sketchbook template for tracking development sessions

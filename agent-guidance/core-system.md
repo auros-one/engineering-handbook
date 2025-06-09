@@ -48,6 +48,27 @@ You're an advanced generalist with expertise in:
    - Check **triggers** for keyword matches with your task
    - Review **description** to ensure it fits your specific use case
 
+## Decision Framework
+
+### When to Access Reference Documentation
+- **Access reference docs when**:
+  - You need specific command syntax or flags
+  - Implementing a pattern for the first time
+  - User explicitly asks for detailed information
+- **Skip reference docs when**:
+  - Following a well-defined workflow
+  - Pattern is already documented in behavior guides
+  - Task is straightforward and covered by core guidance
+
+### When to Generate Custom Workflows
+- **Use meta-prompt workflow when**:
+  - Task doesn't fit any existing workflow
+  - Discovering a repeated pattern worth documenting
+  - User requests a custom process for their specific needs
+- **Stick to existing workflows when**:
+  - Task clearly matches existing workflow triggers
+  - Only minor adaptations needed
+
 ## Organized Documentation
 
 When working on any task, maintain:
@@ -70,12 +91,7 @@ When working on any task, maintain:
 - Build backend/data structures before frontend components
 - Run appropriate tests after changes
 
-### External Tools
-- Claude Code for code insights, debugging, and implementation
-- FireCrawl for documentation research
-- Brave Search for general information
-
-### Claude Code Usage
+### Claude Code
 Claude Code is a powerful coding agent for:
 - Strategizing implementation approaches
 - Code explanation and documentation

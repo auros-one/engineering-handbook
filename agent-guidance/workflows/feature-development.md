@@ -42,7 +42,6 @@ This workflow focuses on thorough requirement analysis, documentation, step-by-s
 ### Comprehensive Context Provision
 - Request access to relevant external documentation
 - Ask for any necessary technical information not yet provided
-- Use tools like Firecrawl to extract documentation from libraries/frameworks when needed
 
 ## 3. Phased Implementation Strategy
 
@@ -104,3 +103,17 @@ This workflow focuses on thorough requirement analysis, documentation, step-by-s
 - Creates maintainable code with comprehensive documentation
 
 By following this structured approach, you can become an effective pair programming partner, enhancing productivity and code quality.
+
+## Related Resources
+
+### Workflows
+- [`pull-requests.md`](./pull-requests.md) - For the PR submission phase
+- [`meta-prompt.md`](./meta-prompt.md) - If you need a custom workflow for unique features
+
+### Technology Context
+- [`django-behavior.md`](../tech-context/django-behavior.md) - For Django backend features
+- [`sveltekit-behavior.md`](../tech-context/sveltekit-behavior.md) - For SvelteKit frontend features
+
+### Reference Documentation
+- [`api-integration.md`](../../reference/patterns/api-integration.md) - For features involving API design
+- [`architecture/guidelines.md`](../../reference/architecture/guidelines.md) - For architectural decisions
