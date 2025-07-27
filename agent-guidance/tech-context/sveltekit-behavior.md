@@ -87,6 +87,54 @@ This project uses Django for the backend and SvelteKit for the frontend. Maintai
 </script>
 ```
 
+**Reactive Query Pattern (when parameters change):**
+```svelte
+<script lang="ts">
+    import type { components } from '$lib/api/backend-api-schema';
+    import { createQuery, useQueryClient } from '@tanstack/svelte-query';
+    import { apiClient } from '$lib/api';
+
+    // Type definitions
+    type ResponseType = components['schemas']['YourSchemaType'];
+
+    // Parameters that can change
+    let searchQuery = '';
+    let currentPage = 1;
+    let filterValue = '';
+
+    // IMPORTANT: Use $: to make query reactive to parameter changes
+    $: query = createQuery<ResponseType>({
+        queryKey: ['uniqueKey', currentPage, searchQuery, filterValue],
+        queryFn: async () => {
+            const { data, error } = await apiClient.GET('/your/endpoint/', {
+                params: {
+                    query: { 
+                        page: currentPage,
+                        search: searchQuery || undefined,
+                        filter: filterValue || undefined
+                    }
+                }
+            });
+
+            if (error) throw new Error(error);
+            if (!data) throw new Error('No data returned');
+            return data;
+        },
+        staleTime: 5 * 60 * 1000,
+    });
+
+    $: data = $query.data;
+    $: isLoading = $query.isPending;
+    $: error = $query.error;
+</script>
+```
+
+**Key Points for Reactive Queries:**
+- Use `$: query = createQuery(...)` when query parameters can change
+- Include all changing parameters in the `queryKey` array
+- This ensures the query automatically refetches when parameters change
+- Essential for search/filter/pagination functionality
+
 **Basic Mutation Pattern:**
 ```svelte
 <script lang="ts">
