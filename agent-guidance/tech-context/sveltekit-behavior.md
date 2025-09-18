@@ -165,6 +165,82 @@ This project uses Django for the backend and SvelteKit for the frontend. Maintai
 </script>
 ```
 
+**Infinite Query Pattern (Load More / Infinite Scroll)**
+
+```svelte
+<script lang="ts">
+  import type { components } from '$lib/api/backend-api-schema';
+  import { createInfiniteQuery } from '@tanstack/svelte-query';
+  import { apiClient } from '$lib/api';
+
+  // Types from OpenAPI (adjust names to your schema)
+  type Item = components['schemas']['Item'];
+  type Page = { results: Item[]; next?: string | null; previous?: string | null };
+
+  export let search = '';       // optional reactive params
+  const pageSize = 20;
+
+  const query = createInfiniteQuery<Page>({
+    queryKey: ['items', pageSize, search],
+    initialPageParam: 1, // first page
+    queryFn: async ({ pageParam }) => {
+      const { data, error } = await apiClient.GET('/items/', {
+        params: { query: { page: pageParam, page_size: pageSize, search: search || undefined } }
+      });
+      if (error) throw new Error(error.error || 'Request failed');
+      if (!data) throw new Error('No data');
+      return data as Page;
+    },
+    getNextPageParam: (lastPage) => {
+      if (!lastPage.next) return undefined;
+      const p = new URL(lastPage.next).searchParams.get('page');
+      return p ? Number(p) : undefined;
+    },
+    staleTime: 5 * 60 * 1000
+  });
+
+  $: pages = $query.data?.pages ?? [];
+  $: items = pages.flatMap(p => p.results);
+</script>
+
+{#if $query.isPending} Loading… {/if}
+{#if $query.error} <p class="error">{$query.error.message}</p> {/if}
+
+<ul>
+  {#each items as item (item.id)}
+    <li><ItemRow {item} /></li>
+  {/each}
+</ul>
+
+<button
+  on:click={() => $query.fetchNextPage()}
+  disabled={!$query.hasNextPage || $query.isFetchingNextPage}
+  aria-busy={$query.isFetchingNextPage}
+>
+  {#if $query.isFetchingNextPage} Loading more…
+  {:else if $query.hasNextPage} Load more
+  {:else} Nothing more to load {/if}
+</button>
+```
+
+**Auto-load on scroll (optional)**
+```svelte
+<script lang="ts">
+  let sentinel: HTMLDivElement;
+  $effect(() => {
+    const io = new IntersectionObserver(async ([e]) => {
+      if (e.isIntersecting && $query.hasNextPage && !$query.isFetchingNextPage) {
+        await $query.fetchNextPage();
+      }
+    });
+    if (sentinel) io.observe(sentinel);
+    return () => io.disconnect();
+  });
+</script>
+
+<div bind:this={sentinel} aria-hidden="true" />
+```
+
 ## State Management (Svelte 5 Runes)
 
 ### Reactive State
