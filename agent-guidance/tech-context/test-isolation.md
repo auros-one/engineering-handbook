@@ -61,11 +61,30 @@ class TestPureLogic:
             assert result.field == "value"
 ```
 
+## Also Avoid: asyncio.run()
+
+`asyncio.run()` creates a new event loop, and when the async function uses `sync_to_async` internally, it breaks isolation:
+
+```python
+# ❌ BAD: asyncio.run() with internal sync_to_async
+def test_foo(self, my_fixture):
+    obj = baker.make(MyModel)  # Created in test transaction
+    result = asyncio.run(
+        async_tool.ainvoke({"id": str(obj.id)})  # Tool uses sync_to_async, different connection!
+    )
+
+# ✅ GOOD: Use async_to_sync instead
+def test_foo(self, my_fixture):
+    obj = baker.make(MyModel)  # Created in test transaction
+    result = async_to_sync(async_tool.ainvoke)({"id": str(obj.id)})  # Same connection
+```
+
 ## Quick Reference
 
 | Pattern | Safe? | Why |
 |---------|-------|-----|
 | `@pytest.mark.asyncio` + `sync_to_async(fixture)()` + `@pytest.mark.django_db` | ❌ | Different DB connection |
+| `asyncio.run()` with code that uses `sync_to_async` internally | ❌ | Different DB connection |
 | Sync test + `async_to_sync(async_func)()` + `@pytest.mark.django_db` | ✅ | Same DB connection |
 | `@pytest.mark.asyncio` without `@pytest.mark.django_db` | ✅ | No DB to isolate |
 | `@pytest.mark.django_db(transaction=True)` | ⚠️ | Works but slower, may cause flush errors |
